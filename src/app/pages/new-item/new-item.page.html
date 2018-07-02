@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>New Item</ion-title>
+    <ion-buttons slot="end">
+      <ion-button ion-button icon-only (click)="back()">
+        <ion-icon name="arrow-round-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form class="form" [formGroup]="new_item_form"  (ngSubmit)="onSubmit(new_item_form.value)">
+    <ion-item>
+      <ion-label floating color="primary">Title</ion-label>
+      <ion-input type="text" formControlName="title" class="form-controll" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating color="primary">Description</ion-label>
+      <ion-input type="text" formControlName="description" class="form-controll" required></ion-input>
+    </ion-item>
+
+    <ion-button ion-button full type="submit" [disabled]="!new_item_form.valid">Create</ion-button>
+
+  </form>
+
+</ion-content>

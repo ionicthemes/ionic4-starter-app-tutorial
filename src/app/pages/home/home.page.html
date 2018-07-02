@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      TODO List
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button icon-only (click)="openNewItemPage()">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+      {{ item.title }}
+    </ion-item>
+  </ion-list>
+</ion-content>
