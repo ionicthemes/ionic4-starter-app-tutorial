@@ -10,5 +10,18 @@
 </ion-header>
 
 <ion-content padding>
+  <form class="form" [formGroup]="edit_item_form"  (ngSubmit)="updateItem(edit_item_form.value)">
+    <ion-item>
+      <ion-label floating color="primary">Title</ion-label>
+      <ion-input type="text" formControlName="title" class="form-controll" required></ion-input>
+    </ion-item>
 
+    <ion-item>
+      <ion-label floating color="primary">Description</ion-label>
+      <ion-input type="text" formControlName="description" class="form-controll" required></ion-input>
+    </ion-item>
+
+    <ion-button ion-button full type="submit" [disabled]="!edit_item_form.valid">Update</ion-button>
+
+  </form>
 </ion-content>

@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="tool-header">
     <ion-title>
       TODO List
     </ion-title>
@@ -14,7 +14,9 @@
 <ion-content padding>
   <ion-list>
     <ion-item ion-item *ngFor="let item of items" (click)="itemSelected(item)">
-      {{ item.title }}
+      <ion-label>
+        {{ item.title }}
+      </ion-label>
     </ion-item>
   </ion-list>
 </ion-content>

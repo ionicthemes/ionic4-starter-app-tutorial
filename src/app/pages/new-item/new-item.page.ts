@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Validators, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
+import { ItemService } from '../../services/item.service';
+
 @Component({
   selector: 'new-item',
   templateUrl: './new-item.page.html',
@@ -13,7 +15,8 @@ export class NewItemPage implements OnInit {
 
   constructor(
     private router: Router,
-    public formBuilder: FormBuilder
+    public formBuilder: FormBuilder,
+    private itemService: ItemService
   ) { }
 
   ngOnInit() {
@@ -25,6 +28,12 @@ export class NewItemPage implements OnInit {
 
   back(){
     this.router.navigate(['/home'])
+  }
+
+  createItem(value){
+    this.itemService.createItem(value.title, value.description);
+    this.back();
+    this.new_item_form.reset();
   }
 
 }

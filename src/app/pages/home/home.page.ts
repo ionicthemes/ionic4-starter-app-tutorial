@@ -25,4 +25,8 @@ export class HomePage implements OnInit {
     this.router.navigate(["/new-item"]);
   }
 
+  itemSelected(item){
+    this.router.navigate(["/update-item", item])
+  }
+
 }
