@@ -1,27 +1,22 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Update Item</ion-title>
-    <ion-buttons slot="end">
-      <ion-button ion-button icon-only (click)="back()">
-        <ion-icon name="arrow-round-back"></ion-icon>
-      </ion-button>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <form class="form" [formGroup]="edit_item_form"  (ngSubmit)="updateItem(edit_item_form.value)">
+  <form [formGroup]="edit_item_form" (ngSubmit)="updateItem(edit_item_form.value)">
     <ion-item>
-      <ion-label floating color="primary">Title</ion-label>
-      <ion-input type="text" formControlName="title" class="form-controll" required></ion-input>
+      <ion-label color="primary" position="floating">Title</ion-label>
+      <ion-input type="text" formControlName="title" required></ion-input>
     </ion-item>
-
     <ion-item>
-      <ion-label floating color="primary">Description</ion-label>
-      <ion-input type="text" formControlName="description" class="form-controll" required></ion-input>
+      <ion-label color="primary" position="floating">Description</ion-label>
+      <ion-input type="text" formControlName="description" required></ion-input>
     </ion-item>
-
-    <ion-button ion-button full type="submit" [disabled]="!edit_item_form.valid">Update</ion-button>
-
+    <ion-button class="submit-btn" expand="block" type="submit" [disabled]="!edit_item_form.valid">Update</ion-button>
   </form>
 </ion-content>

@@ -36,7 +36,7 @@ export class ItemService {
       'id': randomId,
       'title': title,
       'description': description
-    })
+    });
   }
 
   getItems(){

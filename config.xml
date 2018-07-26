@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>ionic4-example</name>
-    <description>An awesome Ionic/Cordova app.</description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
+<widget id="io.ionicthemes.ionic4starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Ionic4 Starter App</name>
+    <description>A simple starter with Ionic 4</description>
+    <author email="hi@ionicframework" href="https://ionicthemes.com/">IonicThemes Team</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />

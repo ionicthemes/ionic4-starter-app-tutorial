@@ -1,11 +1,9 @@
 <ion-header>
   <ion-toolbar class="tool-header">
-    <ion-title>
-      TODO List
-    </ion-title>
+    <ion-title>Home</ion-title>
     <ion-buttons slot="end">
-      <ion-button icon-only (click)="openNewItemPage()">
-        <ion-icon name="add"></ion-icon>
+      <ion-button (click)="openNewItemPage()">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -13,7 +11,7 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+    <ion-item *ngFor="let item of items" (click)="goToItem(item)">
       <ion-label>
         {{ item.title }}
       </ion-label>

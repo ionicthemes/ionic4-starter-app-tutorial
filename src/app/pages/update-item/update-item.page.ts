@@ -32,8 +32,8 @@ export class UpdateItemPage implements OnInit {
     )
   }
 
-  back(){
-    this.router.navigate(['/home'])
+  goBack(){
+    this.router.navigate(['/home']);
   }
 
   updateItem(value){
@@ -43,7 +43,7 @@ export class UpdateItemPage implements OnInit {
       description: value.description
     }
     this.itemService.updateItem(newValues);
-    this.back();
+    this.goBack();
   }
 
 }
