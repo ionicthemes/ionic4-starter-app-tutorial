@@ -26,7 +26,6 @@ export class HomePage implements OnInit {
   }
 
   goToItem(item){
-    debugger;
     this.router.navigate(["/update-item", item]);
   }
 
