@@ -3,7 +3,7 @@
 
 [Spanish tutorial](https://medium.com/learn-ionic-framework/ionic-4-vs-ionic-3-todo-lo-que-necesitas-saber-sobre-ionic-4-5235927c6dd9)
 
-English tutorial: COMING SOON!
+English tutorial: https://ionicthemes.com/tutorials/about/ionic-4-vs-ionic-3
 
 More Ionic tutorial and FREE starter apps in https://ionicthemes.com
 
