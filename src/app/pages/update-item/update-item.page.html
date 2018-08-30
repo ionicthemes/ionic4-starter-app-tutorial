@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>Update Item</ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
@@ -8,8 +8,7 @@
 </ion-header>
 
 <ion-content padding>
-  <!-- <form [formGroup]="edit_item_form" (submit)="updateItem(edit_item_form.value)"> -->
-  <form [formGroup]="edit_item_form">
+  <form [formGroup]="edit_item_form" (submit)="updateItem(edit_item_form.value)">
     <ion-item>
       <ion-label color="primary" position="floating">Title</ion-label>
       <ion-input type="text" formControlName="title" required></ion-input>
@@ -18,7 +17,6 @@
       <ion-label color="primary" position="floating">Description</ion-label>
       <ion-input type="text" formControlName="description" required></ion-input>
     </ion-item>
-    <!-- <ion-button class="submit-btn" expand="block" type="submit" [disabled]="!edit_item_form.valid">Update</ion-button> -->
-    <ion-button class="submit-btn" expand="block" (click)="updateItem(edit_item_form.value)" [disabled]="!edit_item_form.valid">Update</ion-button>
+    <ion-button class="submit-btn" expand="block" type="submit" [disabled]="!edit_item_form.valid">Update</ion-button>
   </form>
 </ion-content>
