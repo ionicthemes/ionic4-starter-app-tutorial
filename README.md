@@ -1,11 +1,13 @@
-## Ionic 4 vs Ionic 3
-### What you need to know about Ionic 4 + FREE Ionic 4 example app included.
+## Ionic 4 Starter App
 
-[Spanish tutorial](https://medium.com/learn-ionic-framework/ionic-4-vs-ionic-3-todo-lo-que-necesitas-saber-sobre-ionic-4-5235927c6dd9)
+### About this repo
+This repo is the code of an Ionic 4 starter app that we created as part of a *Getting started with Ionic 4 tutorial*. In the following tutorial your will learn the differences between Ionic 3 and Ionic 4 and all the new concepts about Ionic 4:
 
-English tutorial: https://ionicthemes.com/tutorials/about/ionic-4-vs-ionic-3
+- [Spanish tutorial](https://medium.com/learn-ionic-framework/ionic-4-vs-ionic-3-todo-lo-que-necesitas-saber-sobre-ionic-4-5235927c6dd9)
 
-More Ionic tutorial and FREE starter apps in https://ionicthemes.com
+- [English tutorial](https://ionicthemes.com/tutorials/about/ionic-4-vs-ionic-3)
+
+Find more Ionic tutorials and starter apps in https://ionicthemes.com
 
 ### Install this Ionic 4 starter app
 ```
@@ -16,6 +18,5 @@ npm install
 ```
 ionic serve
 ```
-
- 
-[Watch the demo of this starter](https://www.youtube.com/watch?v=COTmXyXg5rU)
+### Demo
+https://www.youtube.com/watch?v=COTmXyXg5rU
