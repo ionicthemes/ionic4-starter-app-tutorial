@@ -7,8 +7,8 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <form [formGroup]="edit_item_form" (submit)="updateItem(edit_item_form.value)">
+<ion-content *ngIf="item" padding>
+  <form [formGroup]="edit_item_form" (ngSubmit)="updateItem(edit_item_form.value)">
     <ion-item>
       <ion-label color="primary" position="floating">Title</ion-label>
       <ion-input type="text" formControlName="title" required></ion-input>

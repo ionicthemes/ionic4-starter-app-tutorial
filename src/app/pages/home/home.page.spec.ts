@@ -12,7 +12,7 @@ describe('HomePage', () => {
       declarations: [ HomePage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
-      .compileComponents();
+    .compileComponents();
   }));
 
   beforeEach(() => {

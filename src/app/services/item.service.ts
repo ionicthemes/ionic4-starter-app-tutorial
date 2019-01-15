@@ -43,10 +43,12 @@ export class ItemService {
     return this.items;
   }
 
+  getItemById(id){
+    return this.items.filter(item => item.id === id);
+  }
+
   updateItem(newValues){
     let itemIndex = this.items.findIndex(item => item.id == newValues.id);
     this.items[itemIndex] = newValues;
   }
-
-
 }
