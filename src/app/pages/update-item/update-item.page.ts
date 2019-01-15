@@ -4,7 +4,7 @@ import { Validators, FormBuilder, FormControl, FormGroup } from '@angular/forms'
 import { ItemService } from '../../services/item.service';
 
 @Component({
-  selector: 'update-item',
+  selector: 'app-update-item',
   templateUrl: './update-item.page.html',
   styleUrls: ['./update-item.page.scss'],
 })
@@ -22,12 +22,18 @@ export class UpdateItemPage implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(
-      param => {
-        this.item = param;
-        this.edit_item_form = this.formBuilder.group({
-          title: new FormControl(this.item.title, Validators.required),
-          description: new FormControl(this.item.description, Validators.required),
-        });
+      data => {
+        this.item = this.itemService.getItemById(data.id)[0];
+        //if item is undefined, go back to home
+        if(!this.item){
+          this.goBack();
+        } else{
+          this.edit_item_form = this.formBuilder.group({
+            title: new FormControl(this.item.title, Validators.required),
+            description: new FormControl(this.item.description, Validators.required)
+          });
+        }
+
       }
     )
   }

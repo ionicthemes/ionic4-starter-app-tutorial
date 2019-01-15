@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Validators, FormBuilder, FormControl, FormGroup } from '@angular/forms';
-
 import { ItemService } from '../../services/item.service';
 
 @Component({
-  selector: 'new-item',
+  selector: 'app-new-item',
   templateUrl: './new-item.page.html',
   styleUrls: ['./new-item.page.scss'],
 })

@@ -2,7 +2,7 @@
   <ion-toolbar color="primary">
     <ion-title>Home</ion-title>
     <ion-buttons slot="end">
-      <ion-button (click)="openNewItemPage()">
+      <ion-button [routerLink]="['/new-item']">
         <ion-icon slot="icon-only" name="add"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -11,7 +11,7 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item *ngFor="let item of items" (click)="goToItem(item)">
+    <ion-item *ngFor="let item of items" [routerLink]="['/update-item', item.id]">
       <ion-label>
         {{ item.title }}
       </ion-label>
