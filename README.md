@@ -7,7 +7,7 @@ This repo is the code of an Ionic 4 starter app that we created as part of a *Ge
 
 - [English tutorial](https://ionicthemes.com/tutorials/about/ionic-4-vs-ionic-3)
 
-Find more Ionic tutorials and starter apps in https://ionicthemes.com
+Find more Ionic 4 tutorials and starter apps in https://ionicthemes.com
 
 ### Install this Ionic 4 starter app
 ```
@@ -20,3 +20,12 @@ ionic serve
 ```
 ### Demo
 https://www.youtube.com/watch?v=COTmXyXg5rU
+
+### Get a premium Ionic 4 Starter App
+Did you know that we recently released [Ionic 4 Full Starter App](https://ionicthemes.com/product/ionic4-full-starter-app)? It's an ionic 4 template that you can use to jump start your Ionic app development and save yourself hundreds of hours of design and development.
+
+It is also a PWA and has a score of 100 in lighthouse. Try it on your phone as a PWA to see the magic!
+
+It also has lots of forms and validations examples.
+
+<img src="https://s3-us-west-2.amazonaws.com/ionicthemes/cover_images/redesign/ionic4-full-starter-app.jpg"/>

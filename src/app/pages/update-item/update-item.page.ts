@@ -33,7 +33,6 @@ export class UpdateItemPage implements OnInit {
             description: new FormControl(this.item.description, Validators.required)
           });
         }
-
       }
     )
   }

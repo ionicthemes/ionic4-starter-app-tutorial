@@ -25,13 +25,20 @@ export class ItemService {
       'id': "4",
       'title': "Example 4",
       'description': 'description 4'
+    },
+    {
+      'id': "5",
+      'title': "Need a more complex app?",
+      'description': 'Check the Ionic 4 Full Starter App.'
     }
   ]
 
   constructor() { }
 
   createItem(title, description){
+
     let randomId = Math.random().toString(36).substr(2, 5);
+
     this.items.push({
       'id': randomId,
       'title': title,
