@@ -9,14 +9,26 @@
 
 <ion-content *ngIf="item" padding>
   <form [formGroup]="edit_item_form" (ngSubmit)="updateItem(edit_item_form.value)">
-    <ion-item>
-      <ion-label color="primary" position="floating">Title</ion-label>
-      <ion-input type="text" formControlName="title" required></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label color="primary" position="floating">Description</ion-label>
-      <ion-input type="text" formControlName="description" required></ion-input>
-    </ion-item>
-    <ion-button class="submit-btn" expand="block" type="submit" [disabled]="!edit_item_form.valid">Update</ion-button>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="1">
+          <ion-item>
+            <ion-label color="primary" position="floating">Title</ion-label>
+            <ion-input type="text" formControlName="title" title="i will be smarter with time" required></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="1">
+          <ion-item>
+            <ion-label color="primary" position="floating">Title</ion-label>
+            <ion-input type="text" formControlName="title" title="i will be smarter with time" required></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button class="submit-btn" expand="block" ion-button type="submit" [disabled]="!edit_item_form.valid">
+            Update
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </form>
 </ion-content>

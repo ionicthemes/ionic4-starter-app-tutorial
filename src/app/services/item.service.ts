@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { filter, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -33,9 +35,9 @@ export class ItemService {
     }
   ]
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  createItem(title, description){
+  createItem(title, description) {
 
     let randomId = Math.random().toString(36).substr(2, 5);
 
@@ -46,16 +48,20 @@ export class ItemService {
     });
   }
 
-  getItems(){
+  getItems() {
     return this.items;
   }
 
-  getItemById(id){
+  getItemById(id) {
     return this.items.filter(item => item.id === id);
   }
 
-  updateItem(newValues){
+  updateItem(newValues) {
     let itemIndex = this.items.findIndex(item => item.id == newValues.id);
     this.items[itemIndex] = newValues;
+  }
+
+  getRooms() {
+    return this.http.get<any>('http://localhost:8000/api/hotelrooms').pipe(map(response => response.rooms));
   }
 }
