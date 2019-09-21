@@ -10,11 +10,54 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
+  <!-- <ion-list>
     <ion-item *ngFor="let item of items" [routerLink]="['/update-item', item.id]">
       <ion-label>
         {{ item.title }}
       </ion-label>
     </ion-item>
-  </ion-list>
+  </ion-list> -->
+  <h2>Available Rooms</h2>
+  <h3 *ngIf="isBooked">Some rooms are booked up!</h3>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let room of rooms">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+            <ion-card-title>{{room.room_type.name}}</ion-card-title>
+          </ion-card-header>
+          <ion-item>
+            <ion-icon name="pin" slot="start"></ion-icon>
+            <ion-label>{{room.location.address_site_name}},{{room.location.address_line}},
+              {{room.location.building}}</ion-label>
+            <ion-button fill="outline" slot="end">View</ion-button>
+            <ng-container *ngIf="room.booking!==null;then bookedup; else notBookedup"></ng-container>
+            <ng-template #bookedup>
+              <ion-button fill="outline" slot="end" color="danger" *ngIf="room.booking.is_reservation">
+                booked up
+              </ion-button>
+            </ng-template>
+            <ng-template #notBookedup>
+              <ion-button fill="outline" slot="end" color="success">
+                book now
+              </ion-button>
+            </ng-template>
+          </ion-item>
+          <ion-card-content>
+            {{room.room_type.description}}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- <h2>Rooms</h2>
+  <ion-list>
+    <ion-item *ngFor="let item of rooms" [routerLink]="['/update-item', item.id]">
+      <ion-label>
+        number:{{ item.number }}-type:{{item.room_type.name}}
+      </ion-label>
+    </ion-item>
+  </ion-list> -->
 </ion-content>

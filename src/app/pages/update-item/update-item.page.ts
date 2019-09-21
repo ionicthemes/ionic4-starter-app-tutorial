@@ -25,9 +25,9 @@ export class UpdateItemPage implements OnInit {
       data => {
         this.item = this.itemService.getItemById(data.id)[0];
         //if item is undefined, go back to home
-        if(!this.item){
+        if (!this.item) {
           this.goBack();
-        } else{
+        } else {
           this.edit_item_form = this.formBuilder.group({
             title: new FormControl(this.item.title, Validators.required),
             description: new FormControl(this.item.description, Validators.required)
@@ -37,11 +37,12 @@ export class UpdateItemPage implements OnInit {
     )
   }
 
-  goBack(){
+  goBack() {
     this.router.navigate(['/home']);
   }
 
-  updateItem(value){
+  updateItem(value) {
+    console.log('update');
     let newValues = {
       id: this.item.id,
       title: value.title,
