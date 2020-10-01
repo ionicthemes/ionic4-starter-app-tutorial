@@ -51,4 +51,9 @@ export class UpdateItemPage implements OnInit {
     this.goBack();
   }
 
+  deleteItem(value){
+    this.itemService.deleteItem(value);
+    this.goBack();
+  }
+
 }
