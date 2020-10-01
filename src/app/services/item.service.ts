@@ -27,6 +27,11 @@ export class ItemService {
       'description': 'description 4'
     },
     {
+      'id': "6",
+      'title': "Example 5",
+      'description': 'This is example 5'
+    },
+    {
       'id': "5",
       'title': "Need a more complex app?",
       'description': 'Check the Ionic 4 Full Starter App.'
@@ -58,4 +63,13 @@ export class ItemService {
     let itemIndex = this.items.findIndex(item => item.id == newValues.id);
     this.items[itemIndex] = newValues;
   }
+
+  deleteItem(value){
+    this.removeItemFromArr(this.items,value)
+  }
+
+  removeItemFromArr(arr,item){
+    var i = arr.indexOf(item);
+    arr.splice(i,1);
+}
 }

@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="tertiary">
     <ion-title>New Item</ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
@@ -10,11 +10,11 @@
 <ion-content padding>
   <form [formGroup]="new_item_form" (submit)="createItem(new_item_form.value)">
     <ion-item>
-      <ion-label color="primary" position="floating">Title</ion-label>
+      <ion-label color="tertiary" position="floating">Title</ion-label>
       <ion-input type="text" formControlName="title" required></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label color="primary" position="floating">Description</ion-label>
+      <ion-label color="tertiary" position="floating">Description</ion-label>
       <ion-input type="text" formControlName="description" required></ion-input>
     </ion-item>
     <ion-button class="submit-btn" expand="block" type="submit" [disabled]="!new_item_form.valid">Create</ion-button>
